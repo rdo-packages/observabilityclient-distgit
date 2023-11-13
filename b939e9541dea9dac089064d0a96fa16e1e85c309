@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e487f90c_cfd686da",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-11-13T14:20:43Z",
+      "side": 1,
+      "message": "Based on the PS, I guess that not using the test extra is a deliberate choice. LGTM 👍",
+      "revId": "b939e9541dea9dac089064d0a96fa16e1e85c309",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
