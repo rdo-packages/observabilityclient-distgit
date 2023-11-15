@@ -14,7 +14,8 @@
 %global with_doc 0
 
 %global common_desc \
-This is an OpenStackClient (OSC) plugin that implements commands for management of Prometheus.
+This is an OpenStackClient (OSC) plugin that implements commands for \
+management of Prometheus.
 
 Name:       %{client}
 Version:    XXX
@@ -56,7 +57,7 @@ BuildRequires:  git-core
 Summary:    OpenStack observability client OSC plugin tests
 Requires:   python3-%{sclient} = %{version}-%{release}
 
-# which is not required for python3-%{service} but it is for unit tests.
+# Requirements to run unit tests included in the -tests subpackage
 Requires:       python3-pytest
 Requires:       python3-testtools
 
