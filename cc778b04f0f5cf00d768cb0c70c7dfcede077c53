@@ -1,0 +1,8 @@
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Code-Review+2: Karolina Kula <kkula@redhat.com>
+Workflow+1: Karolina Kula <kkula@redhat.com>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Wed, 15 Nov 2023 09:13:12 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/observabilityclient-distgit/+/50809
+Project: openstack/observabilityclient-distgit
+Branch: refs/heads/rpm-master
