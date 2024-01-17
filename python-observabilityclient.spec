@@ -18,8 +18,8 @@ This is an OpenStackClient (OSC) plugin that implements commands for \
 management of Prometheus.
 
 Name:       %{client}
-Version:    XXX
-Release:    XXX
+Version:    0.1.1
+Release:    1%{?dist}
 Summary:    OpenStack observability client OSC plugin
 License:    Apache-2.0
 URL:        http://launchpad.net/%{client}/
@@ -142,3 +142,6 @@ rm -fr doc/build/html/.doctrees doc/build/html/.buildinfo
 %endif
 
 %changelog
+* Wed Jan 17 2024 RDO <dev@lists.rdoproject.org> 0.1.1-1
+- Update to 0.1.1
+
