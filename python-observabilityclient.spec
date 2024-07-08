@@ -60,8 +60,10 @@ Requires:   python3-%{sclient} = %{version}-%{release}
 # Requirements to run unit tests included in the -tests subpackage
 Requires:       python3-pytest
 Requires:       python3-testtools
+Requires:       python3-stestr
 
 BuildRequires:  python3-testtools
+BuildRequires:  python3-stestr
 
 %description -n python3-%{sclient}-tests
 %{common_desc}
