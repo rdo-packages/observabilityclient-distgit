@@ -1,7 +1,9 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x2ef3fe0ec2b075ab7458b5f8b702b20b13df2318
+%global sources_gpg_sign 0x22284f69d9eccdf3df7819791c711af193ff8e54
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+%{?dlrn: %global tarsources python-observabilityclient}
+%{!?dlrn: %global tarsources python_observabilityclient}
 # we are excluding some BRs from automatic generator
 %global excluded_brs doc8 bandit pre-commit hacking flake8-import-order
 # Exclude sphinx from BRs if docs are disabled
@@ -18,16 +20,16 @@ This is an OpenStackClient (OSC) plugin that implements commands for \
 management of Prometheus.
 
 Name:       %{client}
-Version:    XXX
-Release:    XXX
+Version:    0.4.0
+Release:    1%{?dist}
 Summary:    OpenStack observability client OSC plugin
 License:    Apache-2.0
 URL:        http://launchpad.net/%{client}/
 
-Source0:    https://tarballs.openstack.org/%{client}/%{client}-%{upstream_version}.tar.gz
+Source0:    https://tarballs.openstack.org/%{client}/%{tarsources}-%{upstream_version}.tar.gz
 # Required for tarball sources verification
 %if 0%{?sources_gpg} == 1
-Source101:  https://tarballs.openstack.org/%{client}/%{client}-%{upstream_version}.tar.gz.asc
+Source101:  https://tarballs.openstack.org/%{client}/%{tarsources}-%{upstream_version}.tar.gz.asc
 Source102:  https://releases.openstack.org/_static/%{sources_gpg_sign}.txt
 %endif
 
@@ -85,7 +87,7 @@ This package contains the documentation.
 %if 0%{?sources_gpg} == 1
 %{gpgverify}  --keyring=%{SOURCE102} --signature=%{SOURCE101} --data=%{SOURCE0}
 %endif
-%autosetup -n %{client}-%{upstream_version} -S git
+%autosetup -n %{tarsources}-%{upstream_version} -S git
 
 sed -i /^[[:space:]]*-c{env:.*_CONSTRAINTS_FILE.*/d tox.ini
 sed -i "s/^deps = -c{env:.*_CONSTRAINTS_FILE.*/deps =/" tox.ini
@@ -144,3 +146,6 @@ rm -fr doc/build/html/.doctrees doc/build/html/.buildinfo
 %endif
 
 %changelog
+* Fri Mar 14 2025 RDO <dev@lists.rdoproject.org> 0.4.0-1
+- Update to 0.4.0
+
