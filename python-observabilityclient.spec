@@ -105,6 +105,13 @@ for pkg in %{excluded_brs}; do
   done
 done
 
+# Replace the python_requires with 3.9 if heigher or equal to 3.10.
+# This is to try to build on centos9 for as long as possible.
+%if 0%{?python3_version_nodots} <= 310
+  sed -i "s/^python_requires = >=3\.../python_requires = >=3.9/g" setup.cfg
+%endif
+
+
 # Automatic BR generation
 %generate_buildrequires
 %if 0%{?with_doc}
