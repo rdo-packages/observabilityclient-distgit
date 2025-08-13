@@ -3,7 +3,7 @@
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 # we are excluding some BRs from automatic generator
-%global excluded_brs doc8 bandit pre-commit hacking flake8-import-order
+%global excluded_brs doc8 bandit pre-commit hacking flake8-import-order python-openstackclient
 # Exclude sphinx from BRs if docs are disabled
 %if ! 0%{?with_doc}
 %global excluded_brs %{excluded_brs} sphinx openstackdocstheme
@@ -60,6 +60,7 @@ Requires:   python3-%{sclient} = %{version}-%{release}
 # Requirements to run unit tests included in the -tests subpackage
 Requires:       python3-pytest
 Requires:       python3-testtools
+Requires:       python3-openstackclient
 
 BuildRequires:  python3-testtools
 
@@ -100,6 +101,12 @@ for pkg in %{excluded_brs}; do
     fi
   done
 done
+
+# Replace the python_requires with 3.9 if heigher or equal to 3.10.
+# This is to try to build on centos9 for as long as possible.
+%if 0%{?python3_version_nodots} <= 310
+  sed -i "s/^python_requires = >=3\.../python_requires = >=3.9/g" setup.cfg
+%endif
 
 # Automatic BR generation
 %generate_buildrequires
