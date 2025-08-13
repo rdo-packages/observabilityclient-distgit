@@ -146,3 +146,4 @@ rm -fr doc/build/html/.doctrees doc/build/html/.buildinfo
 %endif
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/python-observabilityclient/commit/2f31846d73c044740ccaaa4204720f0b94d64145
