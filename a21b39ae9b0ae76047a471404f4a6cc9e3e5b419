@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2b2f3bd8_e902a110",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 936
+      },
+      "writtenOn": "2025-10-01T08:09:47Z",
+      "side": 1,
+      "message": "The observabilityclient doesn\u0027t just because of the python_requires: https://opendev.org/openstack/python-observabilityclient/src/branch/master/setup.cfg#L10 . AFAIK at the moment this is just a formal requirement and nothing should actually prevent the observabilityclient from building.\n\nIt\u0027d be really handy to get the latest observabilityclient built on CentOS 9, because it\u0027s a requirement for Aetos, so that way we could have a CentOS 9 Aetos RPM.",
+      "revId": "a21b39ae9b0ae76047a471404f4a6cc9e3e5b419",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
