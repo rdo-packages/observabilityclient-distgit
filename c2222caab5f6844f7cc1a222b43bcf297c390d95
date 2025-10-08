@@ -1,0 +1,9 @@
+Workflow+1: Alfredo Moralejo <amoralej@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Code-Review+2: Matthias Runge <mrunge@matthias-runge.de>
+Code-Review+2: Alfredo Moralejo <amoralej@redhat.com>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Wed, 08 Oct 2025 10:56:43 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/observabilityclient-distgit/+/58391
+Project: openstack/observabilityclient-distgit
+Branch: refs/heads/antelope-rdo
