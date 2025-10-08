@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a298be4_01d631ec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2025-10-08T10:46:32Z",
+      "side": 1,
+      "message": "The most correct way would have been a cherry-pick of https://review.rdoproject.org/r/c/openstack/observabilityclient-distgit/+/58111",
+      "revId": "6a448647430bbeff42309efb957d992898cdadec",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
